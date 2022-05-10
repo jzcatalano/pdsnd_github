@@ -7,7 +7,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'washington': 'washington.csv'}
 
 city_names = ('chicago', 'new york city', 'washington')
-
+# by listing month names with all first then the remaining month names each have an index value equal to their month number on a calendar
 month_names = ('all', 'january', 'february', 'march', 'april', 'may', 'june')
 
 day_names = ('all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday')
@@ -28,7 +28,8 @@ def get_filters():
         city = input("Enter a city name from this list (i.e., Chicago, New York City, or Washington):  ")
         if city.lower() in city_names:
             break
-
+    #using the lower() allows all use input to be evaluated based on the lowercase spelling of the words and accounting for a mix of uppercase and lowercase characters entered by the user
+    
     # TO DO: get user input for month (all, january, february, ... , june)
     while (True):
         month = input("Enter the name of the month you want to analyze (from January through June). Or write 'all' to not filter by month.  ")
