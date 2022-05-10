@@ -35,7 +35,7 @@ def get_filters():
         if month.lower() in month_names:
             break
         else:
-            print ('Try again - Select a valid month.')
+            print ('Try again - Select a valid month from January to June. Or write all to not filer by month.')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while (True):
