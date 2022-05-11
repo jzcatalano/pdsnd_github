@@ -36,7 +36,7 @@ def get_filters():
         if month.lower() in month_names:
             break
         else:
-            print ('Try again - Select a valid month.')
+            print ('Try again - Select a valid month from January to June. Or write all to not filer by month.')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while (True):
@@ -136,10 +136,12 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
     print('The total travel time for all users was ', total_travel_time, 'seconds.')
+    print('\nThe total travel time for all users was ', total_travel_time / 60, 'minutes.')
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('\nThe mean travel time was ', int(mean_travel_time), 'seconds.')
+    print('\nThe mean travel time was ', int(mean_travel_time) / 60, 'minutes.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
